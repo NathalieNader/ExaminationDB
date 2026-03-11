@@ -31,7 +31,7 @@ CREATE TABLE Track_Course (
 CREATE TABLE Instructor (
     InstructorID INT PRIMARY KEY IDENTITY(1,1),
     InstructorName NVARCHAR(100) NOT NULL,
-    Email NVARCHAR(255) UNIQUE,
+    Email NVARCHAR(150) UNIQUE,
     DepartmentNo INT 
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE Instructor_Course (
 CREATE TABLE Student (
     StudentID INT PRIMARY KEY IDENTITY(1,1),
     StudentName NVARCHAR(100) NOT NULL,
-    Email NVARCHAR(255) UNIQUE,
+    Email NVARCHAR(150) UNIQUE,
     Phone NVARCHAR(20) 
 );
 
@@ -77,7 +77,7 @@ CREATE TABLE ModelAnswer (
 
 CREATE TABLE Exam (
     ExamID INT PRIMARY KEY IDENTITY(1,1),
-    ExamName NVARCHAR(150),
+    ExamName NVARCHAR(100),
     CourseID INT FOREIGN KEY REFERENCES Course(CourseID) ON DELETE NO ACTION,
     CreatedDate DATETIME DEFAULT GETDATE(),
     TotalQuestions INT 
