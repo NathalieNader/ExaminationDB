@@ -4,7 +4,7 @@ GO
 -- Purpose : Insert a new branch
 -- Inputs  : @BranchName NVARCHAR(100), @Location NVARCHAR(200)
 -- Output  : New BranchID via SCOPE_IDENTITY()
-Alter PROCEDURE InsertBranch
+CREATE PROCEDURE InsertBranch
     @BranchName NVARCHAR(100),
     @Location   NVARCHAR(200) = NULL
 AS
@@ -40,7 +40,7 @@ GO
 -- Purpose : Update an existing branch
 -- Inputs  : @BranchID INT, @BranchName NVARCHAR(100), @Location NVARCHAR(200)
 -- Output  : Success / error message
-Alter PROCEDURE UpdateBranch
+CREATE PROCEDURE UpdateBranch
     @BranchID   INT,
     @BranchName NVARCHAR(100),
     @Location   NVARCHAR(200) = NULL
@@ -91,7 +91,7 @@ GO
 -- Purpose : Delete a branch (cascades to Track, Student_Track)
 -- Inputs  : @BranchID INT
 -- Output  : Success / error message
-Alter PROCEDURE DeleteBranch
+CREATE PROCEDURE DeleteBranch
     @BranchID INT
 AS
 BEGIN
@@ -131,7 +131,7 @@ GO
 -- Purpose : Select one branch by ID, or all branches if no ID given
 -- Inputs  : @BranchID INT (optional — pass NULL to get all)
 -- Output  : Branch rows (BranchID, BranchName, Location)
-Alter PROCEDURE SelectBranch
+CREATE PROCEDURE SelectBranch
     @BranchID INT = NULL
 AS
 BEGIN
