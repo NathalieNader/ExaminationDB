@@ -226,7 +226,8 @@ END TRY
 END;
 GO
 
-
+-- DeleteQuestion
+-- ------------------------------------------------------------
 --Purpose: Delete a question and its related data (options, model answer).
 --Inputs: @QuestionID
 --Outputs: Removes the question and dependent rows from Option and ModelAnswer tables.
