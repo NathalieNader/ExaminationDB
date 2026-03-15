@@ -1,4 +1,4 @@
-SE ITI_ExaminationDB;
+USE ITI_ExaminationDB;
 GO
  
 -- ============================================================
