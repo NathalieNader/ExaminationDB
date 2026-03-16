@@ -7,11 +7,11 @@ GO
 --           @Email          NVARCHAR,
 --           @Phone  NVARCHAR(20)
 -- Output  : NewStudentID via SCOPE_IDENTITY()
-CREATE StudentInsert 
+CREATE PROCEDURE StudentInsert 
 @StudentID  INT,
 @StudentName  NVARCHAR(100), 
 @Email  NVARCHAR,
-@Phone  NVARCHAR(20)
+@Phone  NVARCHAR(20),
 @NewStudentID  INT OUTPUT
 AS
 Begin 
@@ -64,9 +64,7 @@ BEGIN
     BEGIN
         SET @RowsAffected = 0;
         RETURN;
-    END
-
-    DECLARE @RowsAffected INT;  
+    END 
 
     BEGIN TRY
         BEGIN TRAN;
