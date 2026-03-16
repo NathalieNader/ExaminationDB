@@ -121,30 +121,28 @@ GO
 
 --------------------------------------------------
 -- 7) Insert 20 students
--- Uses StudentInsert procedure exactly as you shared
+-- Uses InsertStudent procedure exactly as you shared
 --------------------------------------------------
-DECLARE @NewStudentID INT;
-
-EXEC StudentInsert @StudentID = 1,  @StudentName = 'Student 01', @Email = 'student01@iti.com', @Phone = '01000000001', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 2,  @StudentName = 'Student 02', @Email = 'student02@iti.com', @Phone = '01000000002', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 3,  @StudentName = 'Student 03', @Email = 'student03@iti.com', @Phone = '01000000003', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 4,  @StudentName = 'Student 04', @Email = 'student04@iti.com', @Phone = '01000000004', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 5,  @StudentName = 'Student 05', @Email = 'student05@iti.com', @Phone = '01000000005', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 6,  @StudentName = 'Student 06', @Email = 'student06@iti.com', @Phone = '01000000006', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 7,  @StudentName = 'Student 07', @Email = 'student07@iti.com', @Phone = '01000000007', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 8,  @StudentName = 'Student 08', @Email = 'student08@iti.com', @Phone = '01000000008', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 9,  @StudentName = 'Student 09', @Email = 'student09@iti.com', @Phone = '01000000009', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 10, @StudentName = 'Student 10', @Email = 'student10@iti.com', @Phone = '01000000010', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 11, @StudentName = 'Student 11', @Email = 'student11@iti.com', @Phone = '01000000011', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 12, @StudentName = 'Student 12', @Email = 'student12@iti.com', @Phone = '01000000012', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 13, @StudentName = 'Student 13', @Email = 'student13@iti.com', @Phone = '01000000013', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 14, @StudentName = 'Student 14', @Email = 'student14@iti.com', @Phone = '01000000014', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 15, @StudentName = 'Student 15', @Email = 'student15@iti.com', @Phone = '01000000015', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 16, @StudentName = 'Student 16', @Email = 'student16@iti.com', @Phone = '01000000016', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 17, @StudentName = 'Student 17', @Email = 'student17@iti.com', @Phone = '01000000017', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 18, @StudentName = 'Student 18', @Email = 'student18@iti.com', @Phone = '01000000018', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 19, @StudentName = 'Student 19', @Email = 'student19@iti.com', @Phone = '01000000019', @NewStudentID = @NewStudentID OUTPUT;
-EXEC StudentInsert @StudentID = 20, @StudentName = 'Student 20', @Email = 'student20@iti.com', @Phone = '01000000020', @NewStudentID = @NewStudentID OUTPUT;
+EXEC InsertStudent @StudentName = 'Ahmed Mohamed',  @Email = 'ahmed.mohamed@iti.com',  @Phone = '01000000001';
+EXEC InsertStudent @StudentName = 'Sara Ali',        @Email = 'sara.ali@iti.com',        @Phone = '01000000002';
+EXEC InsertStudent @StudentName = 'Mohamed Hassan',  @Email = 'mohamed.hassan@iti.com',  @Phone = '01000000003';
+EXEC InsertStudent @StudentName = 'Nour Ibrahim',    @Email = 'nour.ibrahim@iti.com',    @Phone = '01000000004';
+EXEC InsertStudent @StudentName = 'Omar Khaled',     @Email = 'omar.khaled@iti.com',     @Phone = '01000000005';
+EXEC InsertStudent @StudentName = 'Yasmin Tarek',    @Email = 'yasmin.tarek@iti.com',    @Phone = '01000000006';
+EXEC InsertStudent @StudentName = 'Karim Mahmoud',   @Email = 'karim.mahmoud@iti.com',   @Phone = '01000000007';
+EXEC InsertStudent @StudentName = 'Dina Youssef',    @Email = 'dina.youssef@iti.com',    @Phone = '01000000008';
+EXEC InsertStudent @StudentName = 'Tarek Samir',     @Email = 'tarek.samir@iti.com',     @Phone = '01000000009';
+EXEC InsertStudent @StudentName = 'Rania Nasser',    @Email = 'rania.nasser@iti.com',    @Phone = '01000000010';
+EXEC InsertStudent @StudentName = 'Mahmoud Adel',    @Email = 'mahmoud.adel@iti.com',    @Phone = '01000000011';
+EXEC InsertStudent @StudentName = 'Hana Mostafa',    @Email = 'hana.mostafa@iti.com',    @Phone = '01000000012';
+EXEC InsertStudent @StudentName = 'Youssef Ashraf',  @Email = 'youssef.ashraf@iti.com',  @Phone = '01000000013';
+EXEC InsertStudent @StudentName = 'Mona Walid',      @Email = 'mona.walid@iti.com',      @Phone = '01000000014';
+EXEC InsertStudent @StudentName = 'Amr Gamal',       @Email = 'amr.gamal@iti.com',       @Phone = '01000000015';
+EXEC InsertStudent @StudentName = 'Layla Hesham',    @Email = 'layla.hesham@iti.com',    @Phone = '01000000016';
+EXEC InsertStudent @StudentName = 'Hassan Ramadan',  @Email = 'hassan.ramadan@iti.com',  @Phone = '01000000017';
+EXEC InsertStudent @StudentName = 'Salma Farouk',    @Email = 'salma.farouk@iti.com',    @Phone = '01000000018';
+EXEC InsertStudent @StudentName = 'Bilal Sherif',    @Email = 'bilal.sherif@iti.com',    @Phone = '01000000019';
+EXEC InsertStudent @StudentName = 'Noha Essam',      @Email = 'noha.essam@iti.com',      @Phone = '01000000020';
 GO
 
 --------------------------------------------------
@@ -184,12 +182,14 @@ GO
 --------------------------------------------------
 DECLARE @i INT = 1;
 DECLARE @NewQuestionID INT;
+DECLARE @QText NVARCHAR(MAX);
 
 WHILE @i <= 30
 BEGIN
+    SET @QText = N'MCQ Question ' + CAST(@i AS NVARCHAR(10)) + N' for SQL Server';
     EXEC InsertQuestion
         @CourseID = 3,
-        @QuestionText = N'MCQ Question ' + CAST(@i AS NVARCHAR(10)) + N' for SQL Server',
+        @QuestionText = @QText,
         @QuestionType = N'MCQ',
         @Points = 2,
         @NewQuestionID = @NewQuestionID OUTPUT;
@@ -266,12 +266,14 @@ GO
 --------------------------------------------------
 DECLARE @j INT = 1;
 DECLARE @NewTFQuestionID INT;
+DECLARE @QText NVARCHAR(MAX);
 
 WHILE @j <= 20
 BEGIN
+    SET @QText = N'TF Question ' + CAST(@j AS NVARCHAR(10)) + N' for Manual Testing';
     EXEC InsertQuestion
         @CourseID = 1,
-        @QuestionText = N'TF Question ' + CAST(@j AS NVARCHAR(10)) + N' for Manual Testing',
+        @QuestionText = @QText,
         @QuestionType = N'TF',
         @Points = 1,
         @NewQuestionID = @NewTFQuestionID OUTPUT;
