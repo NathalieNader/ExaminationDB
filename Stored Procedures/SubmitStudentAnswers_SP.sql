@@ -1,9 +1,5 @@
 USE ITI_ExaminationDB 
 GO
-
-
-
-
 --Purpose : Records a student's exam attempt by
 
 -- Inputs  : @StudentID   INT            - FK to Student table
