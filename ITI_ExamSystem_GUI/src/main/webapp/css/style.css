@@ -1,0 +1,244 @@
+/* ================================================================
+   ITI Examination System — Global Stylesheet
+   Brand colors: ITI Blue #003580, accent #e8a000 (gold)
+   ================================================================ */
+
+:root {
+    --iti-blue:    #003580;
+    --iti-blue2:   #0055b3;
+    --iti-gold:    #e8a000;
+    --iti-dark:    #001f4d;
+    --sidebar-w:   240px;
+    --body-bg:     #f0f4f9;
+    --card-bg:     #ffffff;
+    --text-main:   #1a1a2e;
+    --text-muted:  #6b7280;
+    --border:      #d1d9e6;
+    --danger:      #dc3545;
+    --success:     #198754;
+    --warning:     #fd7e14;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       background: var(--body-bg); color: var(--text-main); }
+
+/* ── Navbar ───────────────────────────────────────────────────── */
+.navbar {
+    background: linear-gradient(135deg, var(--iti-dark) 0%, var(--iti-blue) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 60px;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+}
+.navbar-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; }
+.navbar-brand .logo-circle {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--iti-gold); color: var(--iti-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 14px;
+}
+.navbar-user { display: flex; align-items: center; gap: 14px; font-size: .9rem; }
+.navbar-user .role-badge {
+    background: var(--iti-gold); color: var(--iti-dark);
+    padding: 2px 10px; border-radius: 20px; font-weight: 700; font-size: .75rem;
+    text-transform: uppercase;
+}
+.nav-logout { color: #ffc; text-decoration: none; font-size: .85rem; }
+.nav-logout:hover { color: var(--iti-gold); }
+
+/* ── Sidebar ──────────────────────────────────────────────────── */
+.sidebar {
+    width: var(--sidebar-w);
+    background: var(--iti-dark);
+    position: fixed; top: 60px; left: 0; bottom: 0;
+    overflow-y: auto;
+    padding: 16px 0;
+}
+.sidebar a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 20px;
+    color: #c8d6eb;
+    text-decoration: none;
+    font-size: .9rem;
+    border-left: 3px solid transparent;
+    transition: all .2s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    border-left-color: var(--iti-gold);
+}
+.sidebar .section-label {
+    color: #5a7299; font-size: .7rem; text-transform: uppercase;
+    letter-spacing: 1px; padding: 14px 20px 4px; font-weight: 700;
+}
+
+/* ── Main content ─────────────────────────────────────────────── */
+.main-content {
+    margin-left: var(--sidebar-w);
+    margin-top: 60px;
+    padding: 28px;
+    min-height: calc(100vh - 60px);
+}
+
+/* ── Cards ────────────────────────────────────────────────────── */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.08);
+    padding: 24px;
+    margin-bottom: 20px;
+}
+.card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border);
+}
+.card-title { font-size: 1.15rem; font-weight: 700; color: var(--iti-blue); }
+
+/* ── Stats grid ───────────────────────────────────────────────── */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+.stat-card {
+    background: linear-gradient(135deg, var(--iti-blue) 0%, var(--iti-blue2) 100%);
+    border-radius: 10px; padding: 20px; color: #fff; text-align: center;
+}
+.stat-card.gold { background: linear-gradient(135deg, #b37400 0%, var(--iti-gold) 100%); color: var(--iti-dark); }
+.stat-card.green { background: linear-gradient(135deg, #0a6640 0%, #198754 100%); }
+.stat-card .stat-num { font-size: 2.2rem; font-weight: 800; }
+.stat-card .stat-lbl { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 7px 16px; border-radius: 7px; border: none;
+    cursor: pointer; font-size: .88rem; font-weight: 600;
+    text-decoration: none; transition: all .15s;
+}
+.btn-primary  { background: var(--iti-blue);  color: #fff; }
+.btn-primary:hover  { background: var(--iti-blue2); }
+.btn-gold     { background: var(--iti-gold); color: var(--iti-dark); }
+.btn-gold:hover { background: #c88d00; }
+.btn-danger   { background: var(--danger); color: #fff; }
+.btn-danger:hover { background: #b02a37; }
+.btn-success  { background: var(--success); color: #fff; }
+.btn-success:hover { background: #146c43; }
+.btn-outline  { background: transparent; border: 2px solid var(--iti-blue); color: var(--iti-blue); }
+.btn-outline:hover { background: var(--iti-blue); color: #fff; }
+.btn-sm { padding: 4px 10px; font-size: .8rem; }
+
+/* ── Tables ───────────────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+thead tr { background: var(--iti-blue); color: #fff; }
+thead th { padding: 11px 14px; text-align: left; font-weight: 600; }
+tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
+tbody tr:hover { background: #f0f7ff; }
+tbody td { padding: 10px 14px; }
+.badge {
+    display: inline-block; padding: 2px 10px; border-radius: 20px;
+    font-size: .75rem; font-weight: 700;
+}
+.badge-mcq  { background: #e7f0ff; color: var(--iti-blue); }
+.badge-tf   { background: #fff3cd; color: #856404; }
+.badge-pass { background: #d1e7dd; color: #0a4020; }
+.badge-fail { background: #f8d7da; color: #842029; }
+
+/* ── Forms ────────────────────────────────────────────────────── */
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: .88rem; color: #374151; }
+.form-control {
+    width: 100%; padding: 9px 13px;
+    border: 1.5px solid var(--border); border-radius: 7px;
+    font-size: .9rem; background: #fff; color: var(--text-main);
+    transition: border-color .2s;
+}
+.form-control:focus { outline: none; border-color: var(--iti-blue); box-shadow: 0 0 0 3px rgba(0,53,128,.12); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-row.three { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ── Alerts ───────────────────────────────────────────────────── */
+.alert {
+    padding: 12px 16px; border-radius: 8px;
+    margin-bottom: 16px; font-size: .9rem; font-weight: 500;
+}
+.alert-success { background: #d1e7dd; color: #0a4020; border-left: 4px solid var(--success); }
+.alert-danger  { background: #f8d7da; color: #842029; border-left: 4px solid var(--danger); }
+.alert-info    { background: #cff4fc; color: #055160; border-left: 4px solid #0dcaf0; }
+
+/* ── Page title ───────────────────────────────────────────────── */
+.page-title { font-size: 1.5rem; font-weight: 800; color: var(--iti-blue); margin-bottom: 20px; }
+.page-title span { color: var(--iti-gold); }
+
+/* ── Login page ───────────────────────────────────────────────── */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--iti-dark) 0%, var(--iti-blue2) 100%);
+    display: flex; align-items: center; justify-content: center;
+}
+.login-box {
+    background: #fff; border-radius: 16px; padding: 40px;
+    width: 100%; max-width: 420px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+}
+.login-logo {
+    text-align: center; margin-bottom: 28px;
+}
+.login-logo .logo-big {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--iti-blue); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 900; margin: 0 auto 10px;
+}
+.login-logo h2 { color: var(--iti-blue); font-size: 1.3rem; }
+.login-logo p { color: var(--text-muted); font-size: .85rem; }
+.role-tabs { display: flex; gap: 0; margin-bottom: 20px; border-radius: 8px; overflow: hidden; border: 2px solid var(--iti-blue); }
+.role-tabs label {
+    flex: 1; text-align: center; padding: 8px;
+    cursor: pointer; font-size: .82rem; font-weight: 600;
+    color: var(--iti-blue); background: #fff; transition: all .2s;
+}
+.role-tabs input[type=radio] { display: none; }
+.role-tabs input[type=radio]:checked + label { background: var(--iti-blue); color: #fff; }
+
+/* ── Exam question card ───────────────────────────────────────── */
+.q-card {
+    background: #fff; border-radius: 10px;
+    padding: 20px; margin-bottom: 14px;
+    border-left: 4px solid var(--iti-blue);
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.q-card .q-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.q-card .q-text { font-weight: 600; margin-bottom: 12px; }
+.q-card .options label {
+    display: block; padding: 8px 12px; border-radius: 6px;
+    border: 1.5px solid var(--border); margin-bottom: 6px;
+    cursor: pointer; transition: all .15s;
+}
+.q-card .options label:hover { border-color: var(--iti-blue); background: #f0f7ff; }
+.q-card .options input[type=radio]:checked + span { color: var(--iti-blue); font-weight: 600; }
+
+/* ── Exam timer ───────────────────────────────────────────────── */
+.exam-timer {
+    position: fixed; top: 68px; right: 24px;
+    background: var(--iti-blue); color: #fff;
+    padding: 8px 18px; border-radius: 8px;
+    font-weight: 700; font-size: 1rem; z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+/* ── Progress bar ─────────────────────────────────────────────── */
+.progress-bar-wrap { background: var(--border); border-radius: 4px; height: 8px; margin-bottom: 6px; }
+.progress-bar-fill { height: 8px; border-radius: 4px; background: var(--iti-gold); transition: width .4s; }
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main-content { margin-left: 0; }
+    .form-row, .form-row.three { grid-template-columns: 1fr; }
+}
